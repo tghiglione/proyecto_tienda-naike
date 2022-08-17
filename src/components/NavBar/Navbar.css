@@ -1,0 +1,25 @@
+.barraNav{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 225px;
+    height: 150px;
+}
+.barraNav_links{
+    width: 50%;
+    justify-content: space-around;
+    font-size: 24px;
+}
+.barraNav_item{
+    color: black;
+    padding: 10px;
+    margin: 10px;
+}
+.barraNav_item:hover{
+    transform: scale(0.9);
+}
+.item_tienda{
+    color:#EABE3F;
+    font-weight: bold;
+}
