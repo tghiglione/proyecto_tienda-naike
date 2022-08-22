@@ -23,3 +23,8 @@
     color:#EABE3F;
     font-weight: bold;
 }
+
+.navbar{
+    justify-content: flex-start;
+    padding: 20px;
+}

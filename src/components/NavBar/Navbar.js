@@ -2,7 +2,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../images/BrandLogo.png';
-import './Navbar.css'
+import './Navbar.css';
+import CartWidget from '../CartWidget/CartWidget';
 
 function BarraNavegacion() {
   return (
@@ -19,6 +20,7 @@ function BarraNavegacion() {
           </Nav>
         </Navbar.Collapse>
       </Container>
+      <CartWidget/>
     </Navbar>
   );
 }

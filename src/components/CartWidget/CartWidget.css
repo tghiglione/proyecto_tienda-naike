@@ -1,0 +1,15 @@
+.cartWidget{
+    width: 25px;
+    height:25px;
+    color:#EABE3F;
+    padding: 10px;
+}
+
+.cartWidgetText{
+    font-weight: bold;
+    margin-left: 5px;
+    width: 25px;
+    height:25px;
+    font-size: 18px;
+    color:#EABE3F;
+}
