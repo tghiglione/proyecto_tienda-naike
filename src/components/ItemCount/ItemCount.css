@@ -1,0 +1,25 @@
+.contador{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+.btn-contador{
+    border: none;
+    background-color:#EABE3F ;
+    margin: 0px 10px;
+    padding: 0px 8px;
+    height: fit-content;
+    width: fit-content;
+    align-self: center;
+    border-radius: 15px;
+}
+.btn-carrito{
+    border: none;
+    color:#EABE3F ;
+    font-weight: bold;
+    width: fit-content;
+    margin: auto;
+    padding: 8px;
+    border-radius: 15px;
+    margin-left: 8px;
+}
