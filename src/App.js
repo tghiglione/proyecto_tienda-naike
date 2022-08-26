@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 
 function App() {
-  const [numProductos,setNumProd]=useState(0);
+  const [numProd,setNumProd]=useState(0);
 
   const agregar=(contador)=>{
     setNumProd(contador);
