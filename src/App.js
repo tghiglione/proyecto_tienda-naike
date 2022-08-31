@@ -4,15 +4,10 @@ import BarraNavegacion from './components/NavBar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
 import { useState } from 'react';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 function App() {
-  const [numProd,setNumProd]=useState(0);
-
-  const agregar=(contador)=>{
-    setNumProd(contador);
-    alert(`Agregado/s correctamente ${contador} producto/s al carrito`);
-  };
 
   return (
     <div className="App">
@@ -20,7 +15,7 @@ function App() {
         <BarraNavegacion/>
       </header>
       <ItemListContainer titulo='NAIKE'/>
-      <ItemCount stock={8} inicial={1} agregarProducto={agregar}/>
+      <ItemDetailContainer/>
     </div>
   );
 }

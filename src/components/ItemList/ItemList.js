@@ -1,7 +1,7 @@
-import { useState, useEffect, React } from "react";
 import Item from "../Item/Item";
-import Stock from "../../Stock/Stock";
 import './ItemList.css';
+import Stock from "../../Stock/Stock";
+import { useState, useEffect, React } from "react";
 
 const ItemList =()=>{
     const [productos,setProductos]=useState([]);
