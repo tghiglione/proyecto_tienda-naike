@@ -3,20 +3,25 @@ import './App.css';
 import BarraNavegacion from './components/NavBar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
-import { useState } from 'react';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 
 function App() {
 
   return (
-    <div className="App">
-      <header className="header">
-        <BarraNavegacion/>
-      </header>
-      <ItemListContainer titulo='NAIKE'/>
-      <ItemDetailContainer/>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <header className="header">
+          <BarraNavegacion/>
+        </header>
+        <Routes>
+          <Route path="/" element={<ItemListContainer titulo='NAIKE'/>}/>
+          <Route path="/producto/:tipoProducto" element={<ItemListContainer titulo='NAIKE'/>}/>
+          <Route path="/detalle/:idProducto" element={<ItemDetailContainer/>}/>
+        </Routes>    
+      </div>  
+    </BrowserRouter>  
   );
 }
 

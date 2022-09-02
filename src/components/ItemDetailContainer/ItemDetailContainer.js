@@ -1,4 +1,5 @@
 import { useEffect,useState, React } from "react";
+import { useParams } from "react-router-dom";
 import Stock from "../../Stock/Stock";
 import ItemCount from "../ItemCount/ItemCount";
 import ItemDetail from "../ItemDetail/ItemDetail";
@@ -6,7 +7,8 @@ import './ItemDetailContainer.css'
 
 const ItemDetailContainer=()=>{
     const [productos,setProductos]=useState([]);
-
+    const {idProducto}=useParams();
+    console.log(idProducto);
     const getItem=()=>{
         return new Promise((res,rej)=>{
             setTimeout(()=>{
@@ -19,7 +21,8 @@ const ItemDetailContainer=()=>{
         const listaStock= async()=>{
             try{
                 const listado=await getItem();
-                setProductos(listado.find(prod=>prod.id===1));
+                const filtro=listado.find(prod=>prod.id==idProducto);
+                setProductos(filtro); 
             }
             catch(error){
                 console.log("hubo un error")

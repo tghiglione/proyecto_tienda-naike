@@ -52,7 +52,7 @@ const Stock=[
     {
         id:5,
         nombre:"Nike air",
-        tipo:"buzo",
+        tipo:"buzos",
         precio:10000,
         cantidad:3,
         imagen:NikeAir,
@@ -61,7 +61,7 @@ const Stock=[
     {
         id:6,
         nombre:"Nike basico",
-        tipo:"buzo",
+        tipo:"buzos",
         precio:8000,
         cantidad:2,
         imagen:NikeBasico,
@@ -70,7 +70,7 @@ const Stock=[
     {
         id:7,
         nombre:"Nike sb",
-        tipo:"buzo",
+        tipo:"buzos",
         precio:9500,
         cantidad:2,
         imagen:NikeSB,
@@ -79,7 +79,7 @@ const Stock=[
     {
         id:8,
         nombre:"Nike swoosh",
-        tipo:"buzo",
+        tipo:"buzos",
         precio:11000,
         cantidad:1,
         imagen:NikeSwoosh,
@@ -88,7 +88,7 @@ const Stock=[
     {
         id:9,
         nombre:"Basica azul",
-        tipo:"remera",
+        tipo:"remeras",
         precio:5000,
         cantidad:8,
         imagen:BasicaAzul,
@@ -97,7 +97,7 @@ const Stock=[
     {
         id:10,
         nombre:"Basica blanca",
-        tipo:"remera",
+        tipo:"remeras",
         precio:4000,
         cantidad:6,
         imagen:BasicaBlanca,
@@ -106,7 +106,7 @@ const Stock=[
     {
         id:11,
         nombre:"Basica roja",
-        tipo:"remera",
+        tipo:"remeras",
         precio:5000,
         cantidad:5,
         imagen:BasicaRoja,
@@ -115,7 +115,7 @@ const Stock=[
     {
         id:12,
         nombre:"Remera Just do it",
-        tipo:"remera",
+        tipo:"remeras",
         precio:9000,
         cantidad:9,
         imagen:JustDoIt,
