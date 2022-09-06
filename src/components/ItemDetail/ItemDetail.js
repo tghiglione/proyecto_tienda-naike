@@ -1,7 +1,15 @@
 import React from "react";
-import './ItemDetail.css'
+import './ItemDetail.css';
+import { useState } from "react";
+import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail=({producto})=>{
+    const [numProd,setNumProd]=useState(0);
+
+    const agregarProducto=(contador)=>{
+        setNumProd(contador);
+        alert(`Agregado/s correctamente ${contador} producto/s al carrito`);
+    };
 
     return(
         <>
@@ -13,6 +21,7 @@ const ItemDetail=({producto})=>{
                 <p className='item_precio'>Precio: ${producto.precio}</p>
                 <p className="item_descripcion">{producto.descripcion}</p>
             </div>
+            <ItemCount stock={producto.cantidad} inicial={1} agregarProducto={agregarProducto}/>
         </>
     )
 };

@@ -40,9 +40,9 @@ const ItemList =()=>{
             {
                 productos.map(prod=>{
                     return(
-                        <Link key={prod.id} to={`detalle/${prod.id}`}>
+                        /* <Link key={prod.id} to={`detalle/${prod.id}`}> */
                             <Item producto={prod}/> 
-                        </Link>    
+                        /* </Link> */    
                     )
                 })
             }
