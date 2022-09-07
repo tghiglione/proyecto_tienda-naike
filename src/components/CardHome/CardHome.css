@@ -1,0 +1,21 @@
+.cardHome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    border: solid 2px #EABE3F;
+    border-radius: 5px;
+}
+
+.cardIcon{
+    width: 50px;
+    height: 50px;
+    color:#EABE3F;
+    margin: 25px;
+}
+.cardTitle{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}

@@ -16,7 +16,8 @@ function BarraNavegacion() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="barraNav_links">
           <Nav className="barraNav_links">
-            <Link to="/" className="barraNav_item item_tienda">Tienda</Link>  
+            <Link to="/" className="barraNav_item">Inicio</Link>
+            <Link to="/tienda" className="barraNav_item item_tienda">Tienda</Link>  
             <Link to="/producto/calzado" className="barraNav_item">Calzado</Link>
             <Link to="/producto/buzos" className="barraNav_item">Buzos</Link>
             <Link to="/producto/remeras" className="barraNav_item">Remeras</Link> 

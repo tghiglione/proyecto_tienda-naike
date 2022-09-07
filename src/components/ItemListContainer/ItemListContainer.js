@@ -1,10 +1,10 @@
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css';
 
-function ItemListContainer(props){
+function ItemListContainer(){
     return(
         <>    
-            <h1 className="titulo">BIENVENIDOS A {props.titulo}</h1>
+            <h1 className="titulo">BIENVENIDOS A NAIKE</h1>
             <ItemList/>
         </>
         
