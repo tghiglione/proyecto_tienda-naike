@@ -7,12 +7,14 @@ import {Link} from "react-router-dom";
 
 const ItemList =()=>{
     const [productos,setProductos]=useState([]);
+    const [loading, setLoading]=useState(true);
     const {tipoProducto}=useParams();
 
     const obtenerStock=()=>{
         return new Promise((res,rej)=>{
             setTimeout(()=>{
                 res(Stock);
+                setLoading(false);
             },2000);
         })    
     };
@@ -33,16 +35,18 @@ const ItemList =()=>{
             }
         };
         listaStock();
+        setLoading(true);
     },[tipoProducto]);
 
     return(
+        loading ? <p className="loading">cargando productos...</p>
+        :
+
         <div className="item_list">
             {
                 productos.map(prod=>{
                     return(
-                        /* <Link key={prod.id} to={`detalle/${prod.id}`}> */
-                            <Item producto={prod}/> 
-                        /* </Link> */    
+                        <Item producto={prod}/>     
                     )
                 })
             }

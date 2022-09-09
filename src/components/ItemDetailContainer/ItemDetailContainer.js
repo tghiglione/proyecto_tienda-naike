@@ -6,6 +6,7 @@ import './ItemDetailContainer.css'
 
 const ItemDetailContainer=()=>{
     const [productos,setProductos]=useState([]);
+    const [loading,setLoading]=useState(true);
     const {idProducto}=useParams();
 
     const getItem=(id)=>{
@@ -13,6 +14,7 @@ const ItemDetailContainer=()=>{
             setTimeout(()=>{
                 const producto=Stock.find(prod=>prod.id==id);
                 res(producto);
+                setLoading(false);
             },2000);
         });   
     };
@@ -28,9 +30,13 @@ const ItemDetailContainer=()=>{
             }
         };
         listaStock();
+        setLoading(true);
     },[idProducto]);
 
     return(
+        loading ? <p className="loading">cargando detalle de producto...</p>
+        :
+
         <div className="item_detail">
             <ItemDetail producto={productos}/>
         </div>   

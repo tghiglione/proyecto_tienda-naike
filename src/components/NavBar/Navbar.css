@@ -15,9 +15,11 @@
     color: black;
     padding: 10px;
     margin: 10px;
+    text-decoration: none;
 }
 .barraNav_item:hover{
     transform: scale(0.9);
+    color:  black;
 }
 .item_tienda{
     color:#EABE3F;

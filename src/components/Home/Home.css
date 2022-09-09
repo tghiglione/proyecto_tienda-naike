@@ -1,9 +1,13 @@
 .homeTitle{
-    width: 100%;
     text-align: center;
     font-family:'Times New Roman', Times, serif;
     font-size: 56px;
     font-style: oblique;
+    margin: 15px 0px;
+    padding: 20px;
+    color: #EABE3F;
+    background-color: black;
+    border-radius: 15px;
 }
 .cards{
     display: flex;
@@ -18,6 +22,7 @@
     text-align: center;
     font-family:'Times New Roman', Times, serif;
     font-size: 36px;
+    margin: 15px 0px;
 }
 
 .ubicacion p{
@@ -28,5 +33,23 @@
 iframe{
     width: 100%;
     height: 300px;
+    margin-bottom: 20px;
 }
-
+.link-tienda{
+    width: 100%;
+    text-align: center;
+}
+.btn-tienda{
+    background-color: black;
+    font-size: 16px;
+    padding: 5px;
+    color: 	#EABE3F;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border:none;
+    border-radius: 10px;
+    width: 25%;
+    margin-bottom: 15px;
+}
+.btn-tienda:hover{
+    transform: scale(1.1);
+}

@@ -8,7 +8,7 @@ const Item=({producto})=>{
             <img src={producto.imagen} alt={producto.nombre} className='item_imagen'/>
             <h3 className='item_nombre'>{producto.nombre}</h3>
             <p className='item_precio'>Precio: ${producto.precio}</p>
-            <Link key={producto.id} to={`detalle/${producto.id}`}>
+            <Link key={producto.id} to={`/detalle/${producto.id}`}>
                 <button className='btn_info'>+info</button>
             </Link>
             

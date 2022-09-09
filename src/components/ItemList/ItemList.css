@@ -5,3 +5,10 @@
     flex-wrap: wrap;
     margin: 50px auto;
 }
+.loading{
+    text-align: center;
+    margin: 20px auto;
+    font-size: 40px;
+    font-weight: bold;
+    color: #EABE3F;
+}
