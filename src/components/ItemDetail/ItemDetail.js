@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import './ItemDetail.css';
-import { useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
+import { CartContext } from "../../context/CartContext";
 
 const ItemDetail=({producto})=>{
-    const [numProd,setNumProd]=useState(0);
+    const {addItem}=useContext(CartContext);
 
-    const agregarProducto=(contador)=>{
-        setNumProd(contador);
-        alert(`Agregado/s correctamente ${contador} producto/s al carrito`);
+    const onAdd=(contador)=>{
+        const newProduct={...producto,quantity:contador}
+        addItem(newProduct)
     };
 
     return(
@@ -21,7 +21,7 @@ const ItemDetail=({producto})=>{
                 <p className='item_precio'>Precio: ${producto.precio}</p>
                 <p className="item_descripcion">{producto.descripcion}</p>
             </div>
-            <ItemCount stock={producto.cantidad} inicial={1} agregarProducto={agregarProducto}/>
+            <ItemCount stock={producto.cantidad} inicial={1} onAdd={onAdd}/>
         </>
     )
 };
