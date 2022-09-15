@@ -37,8 +37,23 @@ const CartProvider=({children})=>{
         setProductCartList([])
     }
 
+    const total=()=>{
+        const totalCompra=[];
+        for(let product of productCartList){
+            const totalPrice=product.quantity*product.precio;
+            totalCompra.push(totalPrice);
+        }
+        const precioFinal=totalCompra.reduce((acc,elm)=>acc+elm,0);
+        return precioFinal;
+    }
+    
+    const totalItems=()=>{
+        const cantidadItems=productCartList.reduce((acc,elm)=>acc+elm.quantity,0);
+        return cantidadItems;
+    }
+
     return(
-        <CartContext.Provider value={{productCartList,addItem,deleteProduct,clearList}}>
+        <CartContext.Provider value={{productCartList,addItem,deleteProduct,clearList,total,totalItems}}>
             {children}
         </CartContext.Provider>
     )
