@@ -4,3 +4,23 @@
     font-size: 16px;
     font-family: sans-serif;
 }
+.btn-end{
+    background-color: #EABE3F;
+    font-size: 16px;
+    padding: 5px;
+    color: 	#4B4B4B;
+    border: none;
+    border-radius: 10px;
+    margin: 15px;
+}
+.btn-continue{
+    background-color: black;
+    font-size: 16px;
+    padding: 5px;
+    color: 	#EABE3F;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border:none;
+    border-radius: 10px;
+    width: 25%;
+    margin-bottom: 15px;
+}
