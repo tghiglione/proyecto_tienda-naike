@@ -1,6 +1,7 @@
+import { doc, getDoc } from "firebase/firestore";
 import { useEffect,useState, React } from "react";
 import { useParams } from "react-router-dom";
-import Stock from "../../Stock/Stock";
+import { db } from "../../utils/firestore";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import './ItemDetailContainer.css'
 
@@ -9,28 +10,21 @@ const ItemDetailContainer=()=>{
     const [loading,setLoading]=useState(true);
     const {idProducto}=useParams();
 
-    const getItem=(id)=>{
-        return new Promise((res,rej)=>{
-            setTimeout(()=>{
-                const producto=Stock.find(prod=>prod.id==id);
-                res(producto);
-                setLoading(false);
-            },2000);
-        });   
-    };
-
     useEffect(()=>{
         const listaStock= async()=>{
             try{
-                const prodFiltrado=await getItem(idProducto);
-                setProductos(prodFiltrado); 
+                const query=doc(db,"items",idProducto);
+                const response=await getDoc(query);
+                const data={...response.data(),id:response.id};
+                console.log(data);
+                setProductos(data); 
             }
             catch(error){
-                console.log("hubo un error")
+                console.log("hubo un error",error)
             }
         };
         listaStock();
-        setLoading(true);
+        setLoading(false);
     },[idProducto]);
 
     return(

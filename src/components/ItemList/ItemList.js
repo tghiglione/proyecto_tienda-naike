@@ -1,41 +1,37 @@
 import Item from "../Item/Item";
 import './ItemList.css';
-import Stock from "../../Stock/Stock";
 import { useState, useEffect, React } from "react";
 import { useParams } from "react-router-dom";
-import {Link} from "react-router-dom";
+import { collection, getDocs, where, query } from "firebase/firestore";
+import { db } from "../../utils/firestore";
+
 
 const ItemList =()=>{
     const [productos,setProductos]=useState([]);
     const [loading, setLoading]=useState(true);
     const {tipoProducto}=useParams();
 
-    const obtenerStock=()=>{
-        return new Promise((res,rej)=>{
-            setTimeout(()=>{
-                res(Stock);
-                setLoading(false);
-            },2000);
-        })    
-    };
-
     useEffect(()=>{
         const listaStock= async()=>{
             try{
-                const listado=await obtenerStock();
-                if(tipoProducto===undefined){
-                    setProductos(listado)
-                }else{
-                    const filtro=listado.filter(item=>item.tipo===tipoProducto);
-                    setProductos(filtro);
-                }    
+                let queryRef= tipoProducto===undefined ? collection(db,"items") : query(collection(db,"items"),where("tipo","==",tipoProducto));
+                const response=await getDocs(queryRef);
+                const docs=response.docs;
+                const data=docs.map(doc=>{
+                    const newDoc={
+                        ...doc.data(),
+                        id:doc.id};
+                    return newDoc;
+
+                });
+                setProductos(data)
             }
             catch(error){
-                console.log("hubo un error")
+                console.log("hubo un error",error)
             }
         };
         listaStock();
-        setLoading(true);
+        setLoading(false);
     },[tipoProducto]);
 
     return(

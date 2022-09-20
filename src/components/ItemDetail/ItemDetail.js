@@ -8,8 +8,6 @@ const ItemDetail=({producto})=>{
     const {addItem}=useContext(CartContext);
     const [cantidad,setCantidad]=useState(0);
     
-
-
     const onAdd=(contador)=>{
         const newProduct={...producto,quantity:contador}
         addItem(newProduct)
