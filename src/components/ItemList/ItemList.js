@@ -8,7 +8,6 @@ import { db } from "../../utils/firestore";
 
 const ItemList =()=>{
     const [productos,setProductos]=useState([]);
-    const [loading, setLoading]=useState(true);
     const {tipoProducto}=useParams();
 
     useEffect(()=>{
@@ -30,13 +29,10 @@ const ItemList =()=>{
                 console.log("hubo un error",error)
             }
         };
-        listaStock();
-        setLoading(false);
+        listaStock()
     },[tipoProducto]);
 
     return(
-        loading ? <p className="loading">cargando productos...</p>
-        :
 
         <div className="item_list">
             {

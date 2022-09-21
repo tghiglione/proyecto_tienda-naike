@@ -7,7 +7,6 @@ import './ItemDetailContainer.css'
 
 const ItemDetailContainer=()=>{
     const [productos,setProductos]=useState([]);
-    const [loading,setLoading]=useState(true);
     const {idProducto}=useParams();
 
     useEffect(()=>{
@@ -24,12 +23,9 @@ const ItemDetailContainer=()=>{
             }
         };
         listaStock();
-        setLoading(false);
     },[idProducto]);
 
     return(
-        loading ? <p className="loading">cargando detalle de producto...</p>
-        :
 
         <div className="item_detail">
             <ItemDetail producto={productos}/>
