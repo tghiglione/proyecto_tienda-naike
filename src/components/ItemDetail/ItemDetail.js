@@ -3,6 +3,8 @@ import './ItemDetail.css';
 import ItemCount from "../ItemCount/ItemCount";
 import { CartContext } from "../../context/CartContext";
 import {Link} from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ItemDetail=({producto})=>{
     const {addItem}=useContext(CartContext);
@@ -11,7 +13,16 @@ const ItemDetail=({producto})=>{
     const onAdd=(contador)=>{
         const newProduct={...producto,quantity:contador}
         addItem(newProduct)
-        setCantidad(contador)
+        setCantidad(contador);
+        toast.success('Producto agregado', {
+            position: "bottom-center",
+            autoClose: 1500,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
     };
 
     return(
@@ -25,7 +36,7 @@ const ItemDetail=({producto})=>{
                 <p className='item_precio'>Precio: ${producto.precio}</p>
                 <p className="item_descripcion">{producto.descripcion}</p>
             </div>
-            <ItemCount stock={producto.cantidad} inicial={0} onAdd={onAdd}/>
+            <ItemCount stock={producto.cantidad} inicial={1} onAdd={onAdd}/>
             {
                 cantidad>0 &&
                 <>
@@ -37,6 +48,7 @@ const ItemDetail=({producto})=>{
                     </Link>
                 </>
             }
+            <ToastContainer/>
         </>
     )
 };

@@ -23,3 +23,7 @@
     width: 25%;
     margin-bottom: 15px;
 }
+.Toastify__toast-theme--light{ 
+    background-color: black;
+    color: #EABE3F;
+}
