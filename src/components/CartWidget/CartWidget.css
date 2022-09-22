@@ -13,3 +13,8 @@
     font-size: 18px;
     color:#EABE3F;
 }
+.cartWidget:hover{
+    background-color: #EABE3F;
+    color: 	black;
+    border-radius: 5px;
+}

@@ -33,7 +33,7 @@ const ItemDetail=({producto})=>{
             </div>
             <div>
                 <h3 className='item_nombre'>{producto.nombre}</h3>
-                <p className='item_precio'>Precio: ${producto.precio}</p>
+                <p className='item_precio'>Precio: <span>${producto.precio}</span></p>
                 <p className="item_descripcion">{producto.descripcion}</p>
             </div>
             <ItemCount stock={producto.cantidad} inicial={1} onAdd={onAdd}/>

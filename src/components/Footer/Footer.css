@@ -20,3 +20,11 @@
     color:#EABE3F;
     margin:5px;
 }
+
+@media screen and (max-width:444px){
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

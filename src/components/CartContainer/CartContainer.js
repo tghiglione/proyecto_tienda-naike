@@ -12,6 +12,28 @@ const CartContainer=()=>{
     const {productCartList, clearList,total}=useContext(CartContext);
     const [idOrder,setIdOrder]=useState("");
 
+    const clearCart=()=>{
+        Swal.fire({
+            title:'Desea vaciar el carrito de compras?',
+            icon:'warning',
+            showCancelButton:true,
+            position:'top',
+            confirmButtonText:'Si, quiero',
+            cancelButtonText:'No!'
+        }).then((result)=>{
+            if(result.isConfirmed){
+                clearList();
+                Swal.fire({
+                    title:'Carrito vaciado correctamente',
+                    icon:'success',
+                    position:'top',
+                    timer:2000,
+                    showConfirmButton:false
+                });
+            };
+        });
+    }
+
     const sendOrder=(e)=>{
         e.preventDefault();
         const nombre=e.target[0].value;
@@ -38,8 +60,12 @@ const CartContainer=()=>{
         }else{
             console.log(order)
             const orderCollection=collection(db,"orders");
-            addDoc(orderCollection,order).then(res=>setIdOrder(res.id));       
+            addDoc(orderCollection,order).then(res=>setIdOrder(res.id));
+            setTimeout(()=>{
+                clearList()
+            },10000)      
         }
+        e.target.reset();
     }
 
     return(
@@ -64,7 +90,7 @@ const CartContainer=()=>{
                         )
                     })
                 }
-                <button onClick={clearList} className='btn-clean'>VACIAR CARRITO</button>
+                <button onClick={clearCart} className='btn-clean'>VACIAR CARRITO</button>
                 <h2 className="precio">El precio final de la compra es de: ${total()}</h2>
             </div>
             <form className="form" onSubmit={sendOrder}>

@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# TIENDA NAIKE
+## Aplicacion e-commerce hecha con react.js
+___
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Como ejecutarlo
 
-## Available Scripts
-
-In the project directory, you can run:
+Clonar el repositorio de forma local y luego utilice los siguientes comandos en consola:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ejecuta la aplicación en el modo de desarrollo.\
+Abra [http://localhost:3000](http://localhost:3000) para verlo en su navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La página se volverá a cargar cuando realice cambios.\
+Tambien puede ver errores de compilacion en la consola.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Inicia el corredor de prueba.\
+Consulte la sección sobre [ejecutar pruebas] (https://facebook.github.io/create-react-app/docs/running-tests) para obtener más información.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Construye la aplicación para producción en la carpeta `build`.\
+Empaqueta correctamente React en modo de producción y optimiza la compilación para obtener el mejor rendimiento.\
+¡Tu aplicación está lista para ser implementada!
+Consulte la sección sobre [implementación](https://facebook.github.io/create-react-app/docs/deployment) para obtener más información
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Nota: esta es una operación unidireccional. ¡Una vez que te 'expulsas', no puedes volver atrás!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Si no está satisfecho con la herramienta de compilación y las opciones de configuración, puede "expulsar" en cualquier momento. Este comando eliminará la dependencia de compilación única de su proyecto.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+En cambio, copiará todos los archivos de configuración y las dependencias transitivas (webpack, Babel, ESLint, etc.) directamente en su proyecto para que tenga control total sobre ellos. Todos los comandos, excepto "expulsar", seguirán funcionando, pero apuntarán a los scripts copiados para que pueda modificarlos. En este punto estás por tu cuenta.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Aprende mas sobre React
 
-## Learn More
+Documentacion: [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para aprender mas sobre React: [React documentation](https://reactjs.org/).
+___
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Librerias y dependencias utilizadas
 
-### Code Splitting
+### React-Bootstrap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Utilizada para hacer la web-app responsive y tambien para la barra de navegacion.\
+Documentacion: [React-Bootstrap](https://react-bootstrap.github.io/getting-started/introduction).
 
-### Analyzing the Bundle Size
+### FontAwesome
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Utilizada para obtener iconos como por ejemplo las redes sociales, el carrito de compras, etc.\
+Documentacion: [React-Fontawesome](https://fontawesome.com/v5/docs/web/use-with/react).
+![ejemplo](https://www.phpkida.com/wp-content/uploads/2017/03/Font-awesome-css-social-media-icons-free-download.png).
 
-### Making a Progressive Web App
+### Toastify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Utilizada para generar notificaciones al agregar un producto al carrito.\
+Documentacion: [React-Toastify](https://fkhadra.github.io/react-toastify/introduction/).
+![ejemplo](https://i.stack.imgur.com/6IaSr.png).
 
-### Advanced Configuration
+### SweetAlert
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Utilizada para generar alertas, por ejemplo al querer eliminar un producto del carrito o al vaciar el carrito completo.\
+Documentacion:[React-SweetAlert](https://github.com/sweetalert2/sweetalert2-react-content)
+![ejemplo](https://parzibyte.me/blog/wp-content/uploads/2019/12/Confirmaci%C3%B3n-con-Sweet-Alert-2.png).
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

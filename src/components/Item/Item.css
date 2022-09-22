@@ -12,7 +12,6 @@
 }
 .item:hover{
     box-shadow: -5px 5px 13px -2px rgba(0,0,0,0.61);
-    transform: scale(1.1);
 }
 .item_imagen{
     width: 190px;
@@ -23,13 +22,12 @@
     font-size: 28px;
     padding: 7px;
     margin: 0;
-    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;;
 }
 
 .item_precio{
     padding: 5px;
     font-size: 18px;
-    color:#EABE3F;
     margin: 0;
 }
 .btn_info{
@@ -40,4 +38,12 @@
     border: none;
     border-radius: 10px;
     margin: 10px;
+}
+
+.btn_info:hover{
+    transform: scale(1.2);
+}
+span{
+    font-weight: bold;
+    color:#EABE3F;
 }

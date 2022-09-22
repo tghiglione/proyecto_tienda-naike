@@ -10,7 +10,7 @@ const CartItem=({producto})=>{
             <h3 className='itemCart_nombre'>{producto.nombre}</h3>
             <p className='itemCart_precio'>Precio: ${producto.precio}</p>
             <p className="itemCart_cantidad">Cantidad: {producto.quantity}</p>
-            <button onClick={()=>deleteProduct(producto.id)} className='btn_cart'>Eliminar producto</button>
+            <button onClick={()=>deleteProduct(producto.id)} className='btn_delete'>Eliminar producto</button>
         </div>
     )
 };

@@ -3,4 +3,10 @@
     margin: 10px;
     text-align: center;
     font-size: 48px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+@media screen and (max-width:370px){
+    .titulo{
+        font-size: 36px;
+    }
 }

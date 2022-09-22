@@ -13,9 +13,17 @@
     border-radius: 10px;
     margin: 10px;
 }
+.btn-clean:hover{
+    background-color: black;
+    color:#EABE3F;
+    transform: scale(1.2);
+}
 .link-back{
     width: 100%;
     text-align: center;
+}
+.link-back:hover{
+    transform: scale(0.9);
 }
 .btn-back{
     background-color: black;

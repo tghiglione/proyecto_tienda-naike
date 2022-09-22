@@ -54,26 +54,7 @@ const CartProvider=({children})=>{
     }   
 
     const clearList=()=>{
-        Swal.fire({
-            title:'Desea vaciar el carrito de compras?',
-            icon:'warning',
-            showCancelButton:true,
-            position:'top',
-            confirmButtonText:'Si, quiero',
-            cancelButtonText:'No!'
-        }).then((result)=>{
-            if(result.isConfirmed){
-                setProductCartList([])
-                Swal.fire({
-                    title:'Carrito vaciado correctamente',
-                    icon:'success',
-                    position:'top',
-                    timer:2000,
-                    showConfirmButton:false
-                });
-            };
-        });
-        
+        setProductCartList([])
     }
 
     const total=()=>{
