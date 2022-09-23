@@ -26,7 +26,6 @@ const ItemDetailContainer=()=>{
     },[idProducto]);
 
     return(
-
         <div className="item_detail">
             <ItemDetail producto={productos}/>
         </div>   

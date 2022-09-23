@@ -6,8 +6,7 @@ function ItemListContainer(){
         <>    
             <h1 className="titulo">BIENVENIDOS A NAIKE</h1>
             <ItemList/>
-        </>
-        
+        </>    
     )
 };
 

@@ -21,7 +21,6 @@ const ItemList =()=>{
                         ...doc.data(),
                         id:doc.id};
                     return newDoc;
-
                 });
                 setProductos(data)
             }
@@ -33,7 +32,6 @@ const ItemList =()=>{
     },[tipoProducto]);
 
     return(
-
         <div className="item_list">
             {
                 productos.map(prod=>{

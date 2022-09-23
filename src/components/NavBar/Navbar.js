@@ -11,7 +11,9 @@ function BarraNavegacion() {
     <Navbar collapseOnSelect expand="lg" variant="light">
       <Container className="barraNav">
         <Link to="/">
-          <Navbar.Brand><img className='logo' src={logo} alt='logo naike'/></Navbar.Brand>
+          <Navbar.Brand>
+            <img className='logo' src={logo} alt='logo naike'/>
+          </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="barraNav_links">

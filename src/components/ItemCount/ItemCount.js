@@ -5,21 +5,11 @@ const ItemCount =(props)=>{
     const [contador,setContador]=useState(props.inicial);
     
     const incrementar=()=>{
-        if(contador<props.stock){
-            setContador(contador+1);
-        }else{
-            alert("No hay mas stock disponible");
-        }
-        
+        contador<props.stock ? setContador(contador+1) : alert("No hay mas stock disponible");
     };
 
     const decrementar=()=>{
-        if(contador>0){
-            setContador(contador-1);
-        }else{
-            alert("No se puede menos de cero")
-        }
-        
+        contador>0 ? setContador(contador-1) : alert("No se puede menos de cero")
     };
 
     return(

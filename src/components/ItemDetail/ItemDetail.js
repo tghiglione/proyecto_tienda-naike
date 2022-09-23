@@ -26,7 +26,6 @@ const ItemDetail=({producto})=>{
     };
 
     return(
-        
         <>
             <div>
                 <img src={producto.imagen} alt={producto.nombre} className='item_imagen'/>

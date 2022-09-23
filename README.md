@@ -46,23 +46,23 @@ ___
 ### React-Bootstrap
 
 Utilizada para hacer la web-app responsive y tambien para la barra de navegacion.\
-Documentacion: [React-Bootstrap](https://react-bootstrap.github.io/getting-started/introduction).
+Documentacion: [React-Bootstrap](https://react-bootstrap.github.io/getting-started/introduction).\
 
 ### FontAwesome
 
 Utilizada para obtener iconos como por ejemplo las redes sociales, el carrito de compras, etc.\
-Documentacion: [React-Fontawesome](https://fontawesome.com/v5/docs/web/use-with/react).
-![ejemplo](https://www.phpkida.com/wp-content/uploads/2017/03/Font-awesome-css-social-media-icons-free-download.png).
+Documentacion: [React-Fontawesome](https://fontawesome.com/v5/docs/web/use-with/react).\
+![ejemplo](https://www.phpkida.com/wp-content/uploads/2017/03/Font-awesome-css-social-media-icons-free-download.png).\
 
 ### Toastify
 
 Utilizada para generar notificaciones al agregar un producto al carrito.\
-Documentacion: [React-Toastify](https://fkhadra.github.io/react-toastify/introduction/).
-![ejemplo](https://i.stack.imgur.com/6IaSr.png).
+Documentacion: [React-Toastify](https://fkhadra.github.io/react-toastify/introduction/).\
+![ejemplo](https://i.stack.imgur.com/6IaSr.png).\
 
 ### SweetAlert
 
 Utilizada para generar alertas, por ejemplo al querer eliminar un producto del carrito o al vaciar el carrito completo.\
-Documentacion:[React-SweetAlert](https://github.com/sweetalert2/sweetalert2-react-content)
-![ejemplo](https://parzibyte.me/blog/wp-content/uploads/2019/12/Confirmaci%C3%B3n-con-Sweet-Alert-2.png).
+Documentacion:[React-SweetAlert](https://github.com/sweetalert2/sweetalert2-react-content).\
+![ejemplo](https://parzibyte.me/blog/wp-content/uploads/2019/12/Confirmaci%C3%B3n-con-Sweet-Alert-2.png).\
 
