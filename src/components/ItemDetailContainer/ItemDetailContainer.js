@@ -8,6 +8,7 @@ import './ItemDetailContainer.css'
 const ItemDetailContainer=()=>{
     const [productos,setProductos]=useState([]);
     const {idProducto}=useParams();
+    const [loading,setLoading]=useState(true);
 
     useEffect(()=>{
         const listaStock= async()=>{
@@ -22,10 +23,13 @@ const ItemDetailContainer=()=>{
                 console.log("hubo un error",error)
             }
         };
+        setLoading(false);
         listaStock();
     },[idProducto]);
 
     return(
+        loading ? <p className="loading">cargando detalle de producto...</p>
+        :
         <div className="item_detail">
             <ItemDetail producto={productos}/>
         </div>   

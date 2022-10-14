@@ -11,18 +11,31 @@ const ItemDetail=({producto})=>{
     const [cantidad,setCantidad]=useState(0);
     
     const onAdd=(contador)=>{
-        const newProduct={...producto,quantity:contador}
-        addItem(newProduct)
-        setCantidad(contador);
-        toast.success('Producto agregado', {
-            position: "bottom-center",
-            autoClose: 1500,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            });
+        if(contador!==0){
+            const newProduct={...producto,quantity:contador}
+            addItem(newProduct)
+            setCantidad(contador);
+            toast.success('Producto agregado', {
+                position: "bottom-center",
+                autoClose: 1500,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
+        }else{
+            toast.warning('No esta agregando ningun producto', {
+                position: "bottom-center",
+                autoClose: 1500,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
+        }
+        
     };
 
     return(
