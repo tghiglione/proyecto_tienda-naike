@@ -24,6 +24,9 @@ const FormCart=()=>{
             items:productCartList,
             precio:total()
         };
+        const expresionEmail= /\w+@\w+\.+[a-z]/;
+        const expresionNombre=/^[a-zA-Z ]*$/;
+
         if((nombre==="" && email==="") || email==="" || apellido==="" || nombre==="" ||(nombre==="" && apellido==="")||(apellido==="" && email==="")){
             Swal.fire({
                 title:'Atencion!',
@@ -33,7 +36,26 @@ const FormCart=()=>{
                 showConfirmButton:false,
                 position:'top',
             });
-        }else{
+        }else if(!expresionEmail.test(email)){
+            Swal.fire({
+                title:'Atencion!',
+                text:'Introduzca un email valido',
+                icon:'warning',
+                timer:2500,
+                showConfirmButton:false,
+                position:'top',
+            });
+        }else if((!expresionNombre.test(nombre)) || (!expresionNombre.test(apellido))){
+            Swal.fire({
+                title:'Atencion!',
+                text:'El nombre y/o apellido no son validos',
+                icon:'warning',
+                timer:2500,
+                showConfirmButton:false,
+                position:'top',
+            });
+        }
+        else{
             const orderCollection= collection(db,"orders");
             addDoc(orderCollection,order).then(res=>setIdOrder(res.id));
             clearList();
