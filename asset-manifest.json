@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/proyecto_tienda-naike/static/css/main.596910aa.css",
-    "main.js": "/proyecto_tienda-naike/static/js/main.a3b80d48.js",
+    "main.js": "/proyecto_tienda-naike/static/js/main.b8df381b.js",
     "static/js/787.7fb104f2.chunk.js": "/proyecto_tienda-naike/static/js/787.7fb104f2.chunk.js",
     "static/media/BrandLogo.png": "/proyecto_tienda-naike/static/media/BrandLogo.e19ecc0394f990a01d38.png",
     "index.html": "/proyecto_tienda-naike/index.html",
     "main.596910aa.css.map": "/proyecto_tienda-naike/static/css/main.596910aa.css.map",
-    "main.a3b80d48.js.map": "/proyecto_tienda-naike/static/js/main.a3b80d48.js.map",
+    "main.b8df381b.js.map": "/proyecto_tienda-naike/static/js/main.b8df381b.js.map",
     "787.7fb104f2.chunk.js.map": "/proyecto_tienda-naike/static/js/787.7fb104f2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.596910aa.css",
-    "static/js/main.a3b80d48.js"
+    "static/js/main.b8df381b.js"
   ]
 }
