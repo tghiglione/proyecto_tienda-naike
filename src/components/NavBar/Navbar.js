@@ -21,7 +21,7 @@ function BarraNavegacion() {
   return (
     <Navbar collapseOnSelect expand="lg" variant="light">
       <Container className="barraNav">
-        <Link to="/">
+        <Link to="/proyecto_tienda-naike">
           <Navbar.Brand>
             <img className='logo' src={logo} alt='logo naike'/>
           </Navbar.Brand>

@@ -20,7 +20,7 @@ function App() {
             <BarraNavegacion/>
           </header>
           <Routes>
-            <Route path="/" element={<Home/>}/>
+            <Route path="/proyecto_tienda-naike" element={<Home/>}/>
             <Route path="/tienda" element={<ItemListContainer/>}/>
             <Route path="/producto/:tipoProducto" element={<ItemListContainer/>}/>
             <Route path="/detalle/:idProducto" element={<ItemDetailContainer/>}/>
